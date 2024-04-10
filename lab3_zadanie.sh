@@ -1,4 +1,5 @@
 #!/bin/bash
+#####LOKALNE REPOZYTORIA######
 #WPROWADZENIE
 #zad.1
 git commit
@@ -105,3 +106,108 @@ git branch -f three C2
 git branch -f one C2'
 git branch -f two C2''
 
+#####ZDALNE REPOZYTORIA#####
+
+#Push & Pull -- Zdalne repozytoria
+#zad.1
+git clone
+
+#zad.2
+git commit
+git checkout o/main
+git commit
+
+#zad.3
+git fetch
+
+#zad.4
+git pull
+
+#zad.5
+git clone
+git fakeTeamwork
+git fakeTeamwork
+git commit
+git pull
+
+#zad.6
+git commit
+git commit
+git push
+
+#zad.7
+git clone
+git fakeTeamwork
+git commit
+git pull --rebase
+git push
+
+#zad.8
+git checkout -b feature
+git push
+git branch -f main C1
+
+#Do zrodla i dalej -- zaawansowane zdalne repozytoria
+#zad.1
+git fetch
+git rebase o/main side1
+git rebase side1 side2
+git rebase side2 side3
+git rebase side3 main
+git push
+
+#zad.2
+git fetch
+git checkout side1
+git merge o/main
+git checkout side2
+git merge side1
+git merge side3
+git branch -f main C11
+git branch -f side1 C2
+git branch -f side2 C4
+git checkout main
+git push
+#Lub
+git checkout main
+git pull
+git merge side1
+git merge side2
+git merge side3
+git push
+
+#zad.3
+git checkout -b side o/main
+git fetch
+git commit
+git rebase o/main side
+git branch -f main side
+git push
+git branch -f main C1
+#lub
+git checkout -b side o/main
+git commit
+git pull --rebase
+git push
+
+#zad.4
+git push origin main
+git push origin foo
+
+#zad.5
+git push origin foo:main
+git push origin main^:foo
+
+#zad.6
+git fetch origin foo:main
+git fetch origin main^:foo
+git checkout foo
+git merge main
+
+#zad.7
+git push origin :foo
+git fetch origin :bar
+
+#zad.8
+git pull origin bar:foo
+git pull origin main:side
